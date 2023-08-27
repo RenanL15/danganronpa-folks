@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Electrolize&family=Fira+Sans&family=Open+Sans&family=PT+Sans:wght@700&family=Roboto:wght@300;400&family=Rubik+Iso&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ch-image {
+  clip: rect(10px, 10px, 10px, 10px);
+}
