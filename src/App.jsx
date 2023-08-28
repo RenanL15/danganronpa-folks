@@ -1,9 +1,9 @@
+import React from "react";
 import { useState, useEffect } from "react";
-import thhLogo from "./assets/imgs/danganronpa-thh-logo.png";
-import gdLogo from "./assets/imgs/danganronpa-gd-logo.png";
-import khLogo from "./assets/imgs/danganronpa-kh-logo.png";
 import Warning from "./assets/imgs/warning.png";
+import ThhBanner from "./assets/imgs/thhBanner.png";
 import Card from "./components/Card/Card";
+import FranchiseLogos from "./components/FranchiseLogos/FranchiseLogos";
 
 // Trigger Happy Havoc characters
 import Aoi from "./assets/imgs/thhCharacters/aoi.png";
@@ -42,7 +42,7 @@ import Gundham from "./assets/imgs/gdCharacters/gundham.png";
 import ByakuyaGD from "./assets/imgs/gdCharacters/byakuya.png";
 
 export default function App() {
-  const [series, setCharacter] = useState("thh");
+  const [franchise, setFranchise] = useState("thh");
   const [spoilers, setSpoilers] = useState(false);
   const showSpoilers = () => {
     let qsShow;
@@ -52,7 +52,6 @@ export default function App() {
     } else {
       setSpoilers(false);
     }
-    console.log(spoilers);
   };
   const thhCharactersInfo = [
     { name: "Aoi Asahina", isDead: false, icon: Aoi },
@@ -90,60 +89,22 @@ export default function App() {
     { name: "Sonia Nevermind", isDead: false, icon: Sonia },
     { name: "Teruteru Hanamura", isDead: true, icon: Teruteru },
   ];
-
+  // console.log(spoilers);
   return (
-    <main className="bg-gray-600">
-      <div className="flex flex-col items-center justify-center min-h-screen p-10">
+    <main className={`bg-[url('./assets/imgs/thhBanner.png')] bg-local`}>
+      <div className="flex flex-col items-center justify-center min-h-screen p-10 bg-[rgba(0,0,0,0.95)]">
+        <FranchiseLogos
+          franchise={franchise}
+          setFranchise={setFranchise}
+          setSpoilers={setSpoilers}
+        />
         <button
           onClick={showSpoilers}
-          className="p-3 font-['Open_Sans'] bg-red-800 rounded-lg text-white font-bold">
+          className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${spoilers ? "bg-gray-600 hover:bg-gray-700" : "bg-red-900 hover:bg-red-950"}`}>
           {spoilers ? "Hide spoilers" : "Show spoilers"}
         </button>
-        <div className="flex flex-col md:flex-row md:gap-32">
-          {/* Trigger Happy Havoc Logo */}
-          <img
-            onClick={() => {
-              setCharacter("thh");
-              setSpoilers(false);
-            }}
-            className={`mt-10 transition duration-200 ease-in-out cursor-pointer ${
-              series === "thh"
-                ? "opacity-100 scale-110"
-                : "opacity-20 hover:scale-110"
-            } w-96`}
-            src={thhLogo}
-          />
-
-          {/* Goodbye Despair Logo */}
-          <img
-            onClick={() => {
-              setCharacter("gd");
-              setSpoilers(false);
-            }}
-            className={`mt-10 transition duration-200 ease-in-out cursor-pointer ${
-              series === "gd"
-                ? "opacity-100 scale-110"
-                : "opacity-20 hover:scale-110"
-            } w-96`}
-            src={gdLogo}
-          />
-
-          {/* Killing Harmony Logo */}
-          <img
-            onClick={() => {
-              setCharacter("kh");
-              setSpoilers(false);
-            }}
-            className={`mt-10 transition duration-200 ease-in-out cursor-pointer ${
-              series === "kh"
-                ? "opacity-100 scale-110"
-                : "opacity-20 hover:scale-110"
-            } w-96`}
-            src={khLogo}
-          />
-        </div>
-        <div className="grid mt-10 2xl:px-28 md:grid-cols-4">
-          {series === "thh"
+        <div className="grid grid-cols-4 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 2xl:px-28">
+          {franchise === "thh"
             ? thhCharactersInfo.map((character, index) => (
                 <Card
                   key={index}
@@ -154,7 +115,7 @@ export default function App() {
                 />
               ))
             : null}
-          {series === "gd"
+          {franchise === "gd"
             ? gdCharactersInfo.map((character, index) => (
                 <Card
                   key={index}
@@ -166,10 +127,10 @@ export default function App() {
               ))
             : null}
         </div>
-        {series === "kh" ? (
+        {franchise === "kh" ? (
           <div className="p-16 flex justify-center items-center gap-2 text-white bg-gray-800 rounded-2xl ">
             <img className="w-12" src={Warning} />
-            <h1 className="font-bold text-2xl">EM DESENVOLVIMENTO</h1>
+            <h1 className="font-bold text-2xl">EM DESENVOLVIMENTO <span className="font-normal text-xl">(ainda não joguei...)</span></h1>
             <img className="w-12" src={Warning} />
           </div>
         ) : null}
