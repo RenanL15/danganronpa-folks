@@ -44,21 +44,12 @@ import ByakuyaGD from "./assets/imgs/gdCharacters/byakuya.png";
 export default function App() {
   const [franchise, setFranchise] = useState("thh");
   const [spoilers, setSpoilers] = useState(false);
-  const showSpoilers = () => {
-    let qsShow;
-    if (!spoilers) {
-      qsShow = confirm("Are you sure you want to see spoilers?");
-      qsShow ? setSpoilers(true) : null;
-    } else {
-      setSpoilers(false);
-    }
-  };
   const thhCharactersInfo = [
+    { name: "Genocide Jack", isDead: false, icon: Jack },
     { name: "Aoi Asahina", isDead: false, icon: Aoi },
     { name: "Byakuya Togami", isDead: false, icon: Byakuya },
     { name: "Celestia Ludenberg", isDead: true, icon: Celeste },
     { name: "Chihiri Fujisaki", isDead: true, icon: Chihiri },
-    { name: "Genocide Jack", isDead: false, icon: Jack },
     { name: "Hifumi Yamada", isDead: true, icon: Hifumi },
     { name: "Junko Enoshima", isDead: true, icon: Junko },
     { name: "Kiyotaka Ishimaru", isDead: true, icon: Taka },
@@ -89,10 +80,22 @@ export default function App() {
     { name: "Sonia Nevermind", isDead: false, icon: Sonia },
     { name: "Teruteru Hanamura", isDead: true, icon: Teruteru },
   ];
+  const showSpoilers = () => {
+    let qsShow;
+    if (!spoilers) {
+      qsShow = confirm("Are you sure you want to see spoilers?");
+      qsShow ? setSpoilers(true) : null;
+    } else {
+      setSpoilers(false);
+    }
+  };
+  const orderByName = () => {
+    thhCharactersInfo.sort((a, b) => a.name - b.name);
+  }
   // console.log(spoilers);
   return (
     <main className={`bg-[url('./assets/imgs/thhBanner.png')] bg-local`}>
-      <div className="flex flex-col items-center justify-center min-h-screen p-10 bg-[rgba(0,0,0,0.95)]">
+      <div className="flex flex-col items-center justify-center min-h-screen p-10 bg-[rgba(0,0,0,0.9)]">
         <FranchiseLogos
           franchise={franchise}
           setFranchise={setFranchise}
@@ -100,8 +103,19 @@ export default function App() {
         />
         <button
           onClick={showSpoilers}
-          className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${spoilers ? "bg-gray-600 hover:bg-gray-700" : "bg-red-900 hover:bg-red-950"}`}>
+          className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${
+            spoilers
+              ? "bg-gray-600 hover:bg-gray-700"
+              : "bg-red-900 hover:bg-red-950"
+          }`}
+        >
           {spoilers ? "Hide spoilers" : "Show spoilers"}
+        </button>
+        <button
+          onClick={orderByName}
+          className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${"bg-gray-600 hover:bg-gray-700"}`}
+        >
+          {"Order by name"}
         </button>
         <div className="grid grid-cols-4 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 2xl:px-28">
           {franchise === "thh"
@@ -130,7 +144,10 @@ export default function App() {
         {franchise === "kh" ? (
           <div className="p-16 flex justify-center items-center gap-2 text-white bg-gray-800 rounded-2xl ">
             <img className="w-12" src={Warning} />
-            <h1 className="font-bold text-2xl">EM DESENVOLVIMENTO <span className="font-normal text-xl">(ainda não joguei...)</span></h1>
+            <h1 className="font-bold text-2xl">
+              EM DESENVOLVIMENTO{" "}
+              <span className="font-normal text-xl">(ainda não joguei...)</span>
+            </h1>
             <img className="w-12" src={Warning} />
           </div>
         ) : null}
