@@ -44,42 +44,43 @@ import ByakuyaGD from "./assets/imgs/gdCharacters/byakuya.png";
 export default function App() {
   const [franchise, setFranchise] = useState("thh");
   const [spoilers, setSpoilers] = useState(false);
-  const thhCharactersInfo = [
-    { name: "Genocide Jack", isDead: false, icon: Jack },
-    { name: "Aoi Asahina", isDead: false, icon: Aoi },
-    { name: "Byakuya Togami", isDead: false, icon: Byakuya },
-    { name: "Celestia Ludenberg", isDead: true, icon: Celeste },
+  const [thhCharactersInfo, setThh] = useState([
     { name: "Chihiri Fujisaki", isDead: true, icon: Chihiri },
-    { name: "Hifumi Yamada", isDead: true, icon: Hifumi },
-    { name: "Junko Enoshima", isDead: true, icon: Junko },
-    { name: "Kiyotaka Ishimaru", isDead: true, icon: Taka },
+    { name: "Toko Fuwaka", isDead: false, icon: Toko },
     { name: "Kyoko Kirigiri", isDead: false, icon: Kirigiri },
+    { name: "Kiyotaka Ishimaru", isDead: true, icon: Taka },
     { name: "Leon Kuwata", isDead: true, icon: Leon },
-    { name: "Mondo Owada", isDead: true, icon: Mondo },
+    { name: "Celestia Ludenberg", isDead: true, icon: Celeste },
     { name: "Naegi Makoto", isDead: false, icon: Naegi },
     { name: "Sakuna Ogami", isDead: true, icon: Sakuna },
-    { name: "Sayaka Maizono", isDead: true, icon: Sayaka },
-    { name: "Toko Fuwaka", isDead: false, icon: Toko },
+    { name: "Mondo Owada", isDead: true, icon: Mondo },
+    { name: "Genocide Jack", isDead: false, icon: Jack },
+    { name: "Hifumi Yamada", isDead: true, icon: Hifumi },
+    { name: "Junko Enoshima", isDead: true, icon: Junko },
+    { name: "Aoi Asahina", isDead: false, icon: Aoi },
+    { name: "Byakuya Togami", isDead: false, icon: Byakuya },
     { name: "Yasuhiro Hagakute", isDead: false, icon: Yasuhiro },
-  ];
-  const gdCharactersInfo = [
+    { name: "Sayaka Maizono", isDead: true, icon: Sayaka },
+  ]);
+
+  const [gdCharactersInfo, setGd] = useState([
+    { name: "Sonia Nevermind", isDead: false, icon: Sonia },
+    { name: "Gundham Tanaka", isDead: false, icon: Gundham },
+    { name: "Peko Pekoyama", isDead: true, icon: Peko },
     { name: "Akane Owana", isDead: false, icon: Akane },
     { name: "Chiaki Nanami", isDead: false, icon: Chiaki },
-    { name: "Byakuya Togami", isDead: true, icon: ByakuyaGD },
     { name: "Fuyuhiko Kuruzyu", isDead: false, icon: Fuyuhiko },
-    { name: "Gundham Tanaka", isDead: false, icon: Gundham },
-    { name: "Hajime Hinata", isDead: false, icon: Hajime },
-    { name: "Hiyoko Saijoni", isDead: true, icon: Hiyoko },
     { name: "Ibuki Mioda", isDead: true, icon: Ibuki },
-    { name: "Mahiru Koizumi", isDead: true, icon: Mahiru },
     { name: "Mikan Tsumiki", isDead: false, icon: Mikan },
-    { name: "Nagito Komaeda", isDead: false, icon: Nagito },
-    { name: "Nekomaru Nidai", isDead: false, icon: Nekomaru },
-    { name: "Peko Pekoyama", isDead: true, icon: Peko },
-    { name: "Kazuichi Soda", isDead: false, icon: Soda },
-    { name: "Sonia Nevermind", isDead: false, icon: Sonia },
     { name: "Teruteru Hanamura", isDead: true, icon: Teruteru },
-  ];
+    { name: "Kazuichi Soda", isDead: false, icon: Soda },
+    { name: "Byakuya Togami", isDead: true, icon: ByakuyaGD },
+    { name: "Hajime Hinata", isDead: false, icon: Hajime },
+    { name: "Mahiru Koizumi", isDead: true, icon: Mahiru },
+    { name: "Nagito Komaeda", isDead: false, icon: Nagito },
+    { name: "Hiyoko Saijoni", isDead: true, icon: Hiyoko },
+    { name: "Nekomaru Nidai", isDead: false, icon: Nekomaru },
+  ]);
   const showSpoilers = () => {
     let qsShow;
     if (!spoilers) {
@@ -89,9 +90,15 @@ export default function App() {
       setSpoilers(false);
     }
   };
-  const orderByName = () => {
-    thhCharactersInfo.sort((a, b) => a.name - b.name);
-  }
+  const sortByName = () => {
+    if (franchise === "thh") {
+      thhCharactersInfo.sort((a, b) => a.name.localeCompare(b.name));
+      setThh([...thhCharactersInfo]);
+    } else {
+      gdCharactersInfo.sort((a, b) => a.name.localeCompare(b.name));
+      setGd([...gdCharactersInfo]);
+    }
+  };
   // console.log(spoilers);
   return (
     <main className={`bg-[url('./assets/imgs/thhBanner.png')] bg-local`}>
@@ -105,17 +112,15 @@ export default function App() {
           onClick={showSpoilers}
           className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${
             spoilers
-              ? "bg-gray-600 hover:bg-gray-700"
+              ? "bg-yellow-800 hover:bg-yellow-700"
               : "bg-red-900 hover:bg-red-950"
-          }`}
-        >
+          }`}>
           {spoilers ? "Hide spoilers" : "Show spoilers"}
         </button>
         <button
-          onClick={orderByName}
-          className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${"bg-gray-600 hover:bg-gray-700"}`}
-        >
-          {"Order by name"}
+          onClick={sortByName}
+          className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${"bg-gray-600 hover:bg-gray-700"}`}>
+          {"Sort by name"}
         </button>
         <div className="grid grid-cols-4 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 2xl:px-28">
           {franchise === "thh"
@@ -129,6 +134,7 @@ export default function App() {
                 />
               ))
             : null}
+          {console.log(thhCharactersInfo)}
           {franchise === "gd"
             ? gdCharactersInfo.map((character, index) => (
                 <Card
@@ -142,13 +148,15 @@ export default function App() {
             : null}
         </div>
         {franchise === "kh" ? (
-          <div className="p-16 flex justify-center items-center gap-2 text-white bg-gray-800 rounded-2xl ">
-            <img className="w-12" src={Warning} />
-            <h1 className="font-bold text-2xl">
-              EM DESENVOLVIMENTO{" "}
-              <span className="font-normal text-xl">(ainda não joguei...)</span>
-            </h1>
-            <img className="w-12" src={Warning} />
+          <div className="p-16 mt-16 flex justify-center items-center gap-2 text-white bg-gray-800 rounded-2xl ">
+            <img className="w-10" src={Warning} />
+            <div className="px-3">
+              <h1 className="font-bold text-2xl">WORKING ON IT!! </h1>
+              <span className="font-normal text-xl opacity-20">
+                (still haven't played lol...)
+              </span>
+            </div>
+            <img className="w-10" src={Warning} />
           </div>
         ) : null}
       </div>
