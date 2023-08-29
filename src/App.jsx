@@ -1,9 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Warning from "./assets/imgs/warning.png";
-import ThhBanner from "./assets/imgs/thhBanner.png";
+
+// Components
 import Card from "./components/Card/Card";
 import FranchiseLogos from "./components/FranchiseLogos/FranchiseLogos";
+import Buttons from "./components/Buttons/Buttons";
 
 // Trigger Happy Havoc characters
 import Aoi from "./assets/imgs/thhCharacters/aoi.png";
@@ -82,22 +84,37 @@ export default function App() {
     { name: "Nekomaru Nidai", isDead: false, icon: Nekomaru },
   ]);
   const showSpoilers = () => {
-    let qsShow;
+    let cfSpoilers;
     if (!spoilers) {
-      qsShow = confirm("Are you sure you want to see spoilers?");
-      qsShow ? setSpoilers(true) : null;
+      cfSpoilers = confirm("Are you sure you want to see spoilers?");
+      cfSpoilers ? setSpoilers(true) : null;
     } else {
       setSpoilers(false);
     }
   };
+
+  const [sort, setSort] = useState("");
   const sortByName = () => {
-    if (franchise === "thh") {
-      thhCharactersInfo.sort((a, b) => a.name.localeCompare(b.name));
-      setThh([...thhCharactersInfo]);
+    if (sort === "ZA") {
+      if (franchise === "thh") {
+        thhCharactersInfo.sort((b, a) => a.name.localeCompare(b.name));
+        setThh([...thhCharactersInfo]);
+      } else {
+        gdCharactersInfo.sort((b, a) => a.name.localeCompare(b.name));
+        setGd([...gdCharactersInfo]);
+      }
+      setSort("AZ");
     } else {
-      gdCharactersInfo.sort((a, b) => a.name.localeCompare(b.name));
-      setGd([...gdCharactersInfo]);
+      if (franchise === "thh") {
+        thhCharactersInfo.sort((b, a) => b.name.localeCompare(a.name));
+        setThh([...thhCharactersInfo]);
+      } else {
+        gdCharactersInfo.sort((b, a) => b.name.localeCompare(a.name));
+        setGd([...gdCharactersInfo]);
+      }
+      setSort("ZA");
     }
+    console.log(sort);
   };
   // console.log(spoilers);
   return (
@@ -108,20 +125,12 @@ export default function App() {
           setFranchise={setFranchise}
           setSpoilers={setSpoilers}
         />
-        <button
-          onClick={showSpoilers}
-          className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${
-            spoilers
-              ? "bg-yellow-800 hover:bg-yellow-700"
-              : "bg-red-900 hover:bg-red-950"
-          }`}>
-          {spoilers ? "Hide spoilers" : "Show spoilers"}
-        </button>
-        <button
-          onClick={sortByName}
-          className={`mt-5 p-3 font-['Open_Sans'] rounded-lg text-white font-bold transition ease-in-out ${"bg-gray-600 hover:bg-gray-700"}`}>
-          {"Sort by name"}
-        </button>
+        <Buttons
+          spoilers={spoilers}
+          showSpoilers={showSpoilers}
+          sort={sort}
+          sortByName={sortByName}
+        />
         <div className="grid grid-cols-4 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 2xl:px-28">
           {franchise === "thh"
             ? thhCharactersInfo.map((character, index) => (
@@ -148,10 +157,10 @@ export default function App() {
             : null}
         </div>
         {franchise === "kh" ? (
-          <div className="p-16 mt-16 flex justify-center items-center gap-2 text-white bg-gray-800 rounded-2xl ">
+          <div className="p-12 mt-16 flex justify-center items-center gap-2 text-white bg-gray-800 rounded-2xl ">
             <img className="w-10" src={Warning} />
-            <div className="px-3">
-              <h1 className="font-bold text-2xl">WORKING ON IT!! </h1>
+            <div className="text-center px-3">
+              <h1 className="font-bold text-xl">WORKING ON IT!! </h1>
               <span className="font-normal text-xl opacity-20">
                 (still haven't played lol...)
               </span>
