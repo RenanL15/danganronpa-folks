@@ -6,3 +6,7 @@
 .ch-image {
   clip: rect(10px, 10px, 10px, 10px);
 }
+
+* {
+  /* border: 1px solid rgb(255, 0, 0); */
+}

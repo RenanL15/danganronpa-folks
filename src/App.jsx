@@ -47,22 +47,102 @@ export default function App() {
   const [franchise, setFranchise] = useState("thh");
   const [spoilers, setSpoilers] = useState(false);
   const [thhCharactersInfo, setThh] = useState([
-    { name: "Chihiri Fujisaki", isDead: true, icon: Chihiri },
-    { name: "Toko Fuwaka", isDead: false, icon: Toko },
-    { name: "Kyoko Kirigiri", isDead: false, icon: Kirigiri },
-    { name: "Kiyotaka Ishimaru", isDead: true, icon: Taka },
-    { name: "Leon Kuwata", isDead: true, icon: Leon },
-    { name: "Celestia Ludenberg", isDead: true, icon: Celeste },
-    { name: "Naegi Makoto", isDead: false, icon: Naegi },
-    { name: "Sakuna Ogami", isDead: true, icon: Sakuna },
-    { name: "Mondo Owada", isDead: true, icon: Mondo },
-    { name: "Genocide Jack", isDead: false, icon: Jack },
-    { name: "Hifumi Yamada", isDead: true, icon: Hifumi },
-    { name: "Junko Enoshima", isDead: true, icon: Junko },
-    { name: "Aoi Asahina", isDead: false, icon: Aoi },
-    { name: "Byakuya Togami", isDead: false, icon: Byakuya },
-    { name: "Yasuhiro Hagakute", isDead: false, icon: Yasuhiro },
-    { name: "Sayaka Maizono", isDead: true, icon: Sayaka },
+    {
+      name: "Chihiri Fujisaki",
+      ultimate: "Ultimate Programmer",
+      isDead: true,
+      icon: Chihiri,
+    },
+    {
+      name: "Toko Fuwaka",
+      ultimate: "Ultimate Writing Prodigy",
+      isDead: false,
+      icon: Toko,
+    },
+    {
+      name: "Kyoko Kirigiri",
+      ultimate: "Ultimate Detective",
+      isDead: false,
+      icon: Kirigiri,
+    },
+    {
+      name: "Kiyotaka Ishimaru",
+      ultimate: "Ultimate Moral Compass",
+      isDead: true,
+      icon: Taka,
+    },
+    {
+      name: "Leon Kuwata",
+      ultimate: "Ultimate Baseball Star",
+      isDead: true,
+      icon: Leon,
+    },
+    {
+      name: "Celestia Ludenberg",
+      ultimate: "Ultimate Gambler",
+      isDead: true,
+      icon: Celeste,
+    },
+    {
+      name: "Naegi Makoto",
+      ultimate: "Ultimate Lucky Student",
+      isDead: false,
+      icon: Naegi,
+    },
+    {
+      name: "Sakuna Ogami",
+      ultimate: "Ultimate Martial Artist",
+      isDead: true,
+      icon: Sakuna,
+    },
+    {
+      name: "Mondo Owada",
+      ultimate: "Ultimate Biker Gang",
+      isDead: true,
+      icon: Mondo,
+    },
+    {
+      name: "Genocide Jack",
+      ultimate: "Ultimate Murderous Fiend",
+      isDead: false,
+      icon: Jack,
+    },
+    {
+      name: "Hifumi Yamada",
+      ultimate: "Ultimate Fanfic Creator",
+      isDead: true,
+      icon: Hifumi,
+    },
+    {
+      name: "Junko Enoshima",
+      ultimate: "Ultimate Fashionista",
+      isDead: true,
+      icon: Junko,
+    },
+    {
+      name: "Aoi Asahina",
+      ultimate: "Ultimate Swimmer Pro",
+      isDead: false,
+      icon: Aoi,
+    },
+    {
+      name: "Byakuya Togami",
+      ultimate: "Ultimate Affluent Progeny",
+      isDead: false,
+      icon: Byakuya,
+    },
+    {
+      name: "Yasuhiro Hagakute",
+      ultimate: "Ultimate Clairvoyant",
+      isDead: false,
+      icon: Yasuhiro,
+    },
+    {
+      name: "Sayaka Maizono",
+      ultimate: "Ultimate Pop Sensation",
+      isDead: true,
+      icon: Sayaka,
+    },
   ]);
 
   const [gdCharactersInfo, setGd] = useState([
@@ -124,6 +204,7 @@ export default function App() {
           franchise={franchise}
           setFranchise={setFranchise}
           setSpoilers={setSpoilers}
+          setSort={setSort}
         />
         <Buttons
           spoilers={spoilers}
@@ -139,6 +220,7 @@ export default function App() {
                   chName={character.name}
                   chImage={character.icon}
                   isDead={character.isDead}
+                  chUltimate={character.ultimate}
                   showSpoilers={spoilers}
                 />
               ))
@@ -157,11 +239,11 @@ export default function App() {
             : null}
         </div>
         {franchise === "kh" ? (
-          <div className="p-12 mt-16 flex justify-center items-center gap-2 text-white bg-gray-800 rounded-2xl ">
+          <div className="flex items-center justify-center gap-2 p-12 mt-16 text-white bg-gray-800 rounded-2xl ">
             <img className="w-10" src={Warning} />
-            <div className="text-center px-3">
-              <h1 className="font-bold text-xl">WORKING ON IT!! </h1>
-              <span className="font-normal text-xl opacity-20">
+            <div className="px-3 text-center">
+              <h1 className="text-xl font-bold">WORKING ON IT!! </h1>
+              <span className="text-xl font-normal opacity-20">
                 (still haven't played lol...)
               </span>
             </div>

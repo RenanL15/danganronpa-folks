@@ -7,6 +7,7 @@ export default function FranchiseLogos({
   franchise,
   setFranchise,
   setSpoilers,
+  setSort,
 }) {
   return (
     <div className="flex justify-center items-center gap-32 max-lg:flex-col max-xl:gap-12">
@@ -15,6 +16,7 @@ export default function FranchiseLogos({
         onClick={() => {
           setFranchise("thh");
           setSpoilers(false);
+          setSort("");
         }}
         className={`mt-10 max-2xl:w-72 transition duration-200 ease-in-out cursor-pointer ${
           franchise === "thh"
@@ -29,6 +31,7 @@ export default function FranchiseLogos({
         onClick={() => {
           setFranchise("gd");
           setSpoilers(false);
+          setSort("");
         }}
         className={`mt-10 max-2xl:w-72 transition duration-200 ease-in-out cursor-pointer ${
           franchise === "gd"
@@ -43,6 +46,7 @@ export default function FranchiseLogos({
         onClick={() => {
           setFranchise("kh");
           setSpoilers(false);
+          setSort("");
         }}
         className={`mt-10 max-2xl:w-72 transition duration-200 ease-in-out cursor-pointer ${
           franchise === "kh"
