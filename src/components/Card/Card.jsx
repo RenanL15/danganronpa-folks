@@ -37,7 +37,7 @@ export default function Card({
       </div>
       <span
         className={`text-2xl text-yellow-500 duration-[400ms] font-['PT_Sans'] ${
-          ultimate ? "opacity-1" : "opacity-0"
+          ultimate ? "opacity-1" : "opacity-0 select-none"
         }`}>
         {chUltimate}
       </span>

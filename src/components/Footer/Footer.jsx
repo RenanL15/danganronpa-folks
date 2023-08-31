@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center justify-center gap-3 p-24 text-3xl bg-gray-900 max-md:p-20 max-md:text-2xl max-sm:px-2 max-sm:py-16">
+    <div className="flex flex-col items-center justify-center gap-3 p-20 text-3xl bg-gray-900 max-md:text-2xl max-sm:px-2 max-sm:py-16">
       <div className="flex items-center gap-3">
         <p className="font-['Electrolize'] text-white">
           Developed by:{" "}
