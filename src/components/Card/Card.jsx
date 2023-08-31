@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../index.css";
 
 export default function Card({
@@ -8,19 +9,23 @@ export default function Card({
   showSpoilers,
   chUltimate,
 }) {
+  const navigate = useNavigate();
   const [ultimate, setUltimate] = useState(false);
   return (
     <div className="flex flex-col items-center justify-center gap-3 mt-10">
       <div
         onMouseOver={() => setUltimate(true)}
         onMouseLeave={() => setUltimate(false)}
-        className="mx-10 text-center text-white duration-300 bg-[rgb(35,35,35)] shadow-xl rounded-2xl hover:text-yellow-500 hover:bg-yellow-500">
+        onClick={() => navigate("/Hajime")}
+        className="mx-10 text-center text-white duration-300 bg-[rgb(35,35,35)] shadow-xl rounded-2xl hover:text-yellow-500 hover:bg-yellow-500"
+      >
         <h1
           className={`${
             isDead && showSpoilers
               ? "z-10 font-['Rubik_Iso'] scale-[5] translate-y-36 -translate-x-5 -rotate-12 inline-block absolute font-bold select-none text-red-700"
               : "hidden"
-          }`}>
+          }`}
+        >
           DEAD
         </h1>
         <img
@@ -38,7 +43,8 @@ export default function Card({
       <span
         className={`text-2xl text-yellow-500 duration-[400ms] font-['PT_Sans'] ${
           ultimate ? "opacity-1" : "opacity-0 select-none"
-        }`}>
+        }`}
+      >
         {chUltimate}
       </span>
     </div>
