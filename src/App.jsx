@@ -6,6 +6,7 @@ import Warning from "./assets/imgs/warning.png";
 import Card from "./components/Card/Card";
 import FranchiseLogos from "./components/FranchiseLogos/FranchiseLogos";
 import Buttons from "./components/Buttons/Buttons";
+import Footer from "./components/Footer/Footer";
 
 // Trigger Happy Havoc characters
 import Aoi from "./assets/imgs/thhCharacters/aoi.png";
@@ -146,22 +147,92 @@ export default function App() {
   ]);
 
   const [gdCharactersInfo, setGd] = useState([
-    { name: "Sonia Nevermind", isDead: false, icon: Sonia },
-    { name: "Gundham Tanaka", isDead: false, icon: Gundham },
-    { name: "Peko Pekoyama", isDead: true, icon: Peko },
-    { name: "Akane Owana", isDead: false, icon: Akane },
-    { name: "Chiaki Nanami", isDead: false, icon: Chiaki },
-    { name: "Fuyuhiko Kuruzyu", isDead: false, icon: Fuyuhiko },
-    { name: "Ibuki Mioda", isDead: true, icon: Ibuki },
-    { name: "Mikan Tsumiki", isDead: false, icon: Mikan },
-    { name: "Teruteru Hanamura", isDead: true, icon: Teruteru },
-    { name: "Kazuichi Soda", isDead: false, icon: Soda },
-    { name: "Byakuya Togami", isDead: true, icon: ByakuyaGD },
-    { name: "Hajime Hinata", isDead: false, icon: Hajime },
-    { name: "Mahiru Koizumi", isDead: true, icon: Mahiru },
-    { name: "Nagito Komaeda", isDead: false, icon: Nagito },
-    { name: "Hiyoko Saijoni", isDead: true, icon: Hiyoko },
-    { name: "Nekomaru Nidai", isDead: false, icon: Nekomaru },
+    {
+      name: "Sonia Nevermind",
+      ultimate: "Ultimate ",
+      isDead: false,
+      icon: Sonia,
+    },
+    {
+      name: "Gundham Tanaka",
+      ultimate: "Ultimate Breeder",
+      isDead: false,
+      icon: Gundham,
+    },
+    {
+      name: "Peko Pekoyama",
+      ultimate: "Ultimate Swordswoman",
+      isDead: true,
+      icon: Peko,
+    },
+    { name: "Akane Owana", ultimate: "Ultimate ", isDead: false, icon: Akane },
+    {
+      name: "Chiaki Nanami",
+      ultimate: "Ultimate Gamer",
+      isDead: false,
+      icon: Chiaki,
+    },
+    {
+      name: "Fuyuhiko Kuruzyu",
+      ultimate: "Ultimate Yakuza",
+      isDead: false,
+      icon: Fuyuhiko,
+    },
+    {
+      name: "Ibuki Mioda",
+      ultimate: "Ultimate Musician",
+      isDead: true,
+      icon: Ibuki,
+    },
+    {
+      name: "Mikan Tsumiki",
+      ultimate: "Ultimate Nurse",
+      isDead: false,
+      icon: Mikan,
+    },
+    {
+      name: "Teruteru Hanamura",
+      ultimate: "Ultimate Cook",
+      isDead: true,
+      icon: Teruteru,
+    },
+    { name: "Kazuichi Soda", ultimate: "Ultimate ", isDead: false, icon: Soda },
+    {
+      name: "Byakuya Togami",
+      ultimate: "Ultimate Affluent Progeny (?)",
+      isDead: true,
+      icon: ByakuyaGD,
+    },
+    {
+      name: "Hajime Hinata",
+      ultimate: "Ultimate ???",
+      isDead: false,
+      icon: Hajime,
+    },
+    {
+      name: "Mahiru Koizumi",
+      ultimate: "Ultimate Photographer",
+      isDead: true,
+      icon: Mahiru,
+    },
+    {
+      name: "Nagito Komaeda",
+      ultimate: "Ultimate Lucky Student",
+      isDead: false,
+      icon: Nagito,
+    },
+    {
+      name: "Hiyoko Saijoni",
+      ultimate: "Ultimate Traditional Dancer",
+      isDead: true,
+      icon: Hiyoko,
+    },
+    {
+      name: "Nekomaru Nidai",
+      ultimate: "Ultimate ",
+      isDead: false,
+      icon: Nekomaru,
+    },
   ]);
   const showSpoilers = () => {
     let cfSpoilers;
@@ -199,7 +270,7 @@ export default function App() {
   // console.log(spoilers);
   return (
     <main className={`bg-[url('./assets/imgs/thhBanner.png')] bg-local`}>
-      <div className="flex flex-col items-center justify-center min-h-screen p-10 bg-[rgba(0,0,0,0.9)]">
+      <div className="flex flex-col items-center justify-center min-h-screen p-10 bg-[rgba(0,0,0,0.9)] max-md:bg-[rgba(0,0,0,0.8)]">
         <FranchiseLogos
           franchise={franchise}
           setFranchise={setFranchise}
@@ -233,6 +304,7 @@ export default function App() {
                   chName={character.name}
                   chImage={character.icon}
                   isDead={character.isDead}
+                  chUltimate={character.ultimate}
                   showSpoilers={spoilers}
                 />
               ))
@@ -251,6 +323,7 @@ export default function App() {
           </div>
         ) : null}
       </div>
+      <Footer />
     </main>
   );
 }

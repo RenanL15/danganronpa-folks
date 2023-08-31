@@ -14,7 +14,7 @@ export default function Card({
       <div
         onMouseOver={() => setUltimate(true)}
         onMouseLeave={() => setUltimate(false)}
-        className="mx-10 text-center text-white duration-300 bg-[rgb(35,35,35)] shadow-xl my- rounded-2xl hover:text-yellow-500 hover:bg-yellow-500">
+        className="mx-10 text-center text-white duration-300 bg-[rgb(35,35,35)] shadow-xl rounded-2xl hover:text-yellow-500 hover:bg-yellow-500">
         <h1
           className={`${
             isDead && showSpoilers
