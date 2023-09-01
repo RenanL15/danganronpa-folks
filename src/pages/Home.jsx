@@ -187,7 +187,7 @@ export default function Home() {
     {
       name: "Mikan Tsumiki",
       ultimate: "Ultimate Nurse",
-      isDead: false,
+      isDead: true,
       icon: Mikan,
     },
     {
@@ -196,7 +196,7 @@ export default function Home() {
       isDead: true,
       icon: Teruteru,
     },
-    { name: "Kazuichi Soda", ultimate: "Ultimate ", isDead: false, icon: Soda },
+    { name: "Kazuichi Soda", ultimate: "Ultimate Mechanic", isDead: false, icon: Soda },
     {
       name: "Byakuya Togami",
       ultimate: "Ultimate Affluent Progeny (?)",
@@ -229,7 +229,7 @@ export default function Home() {
     },
     {
       name: "Nekomaru Nidai",
-      ultimate: "Ultimate ",
+      ultimate: "Ultimate Team Manager",
       isDead: false,
       icon: Nekomaru,
     },
