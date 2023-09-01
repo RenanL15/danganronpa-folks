@@ -149,7 +149,7 @@ export default function Home() {
   const [gdCharactersInfo, setGd] = useState([
     {
       name: "Sonia Nevermind",
-      ultimate: "Ultimate ",
+      ultimate: "Ultimate Princess",
       isDead: false,
       icon: Sonia,
     },
@@ -165,7 +165,7 @@ export default function Home() {
       isDead: true,
       icon: Peko,
     },
-    { name: "Akane Owana", ultimate: "Ultimate ", isDead: false, icon: Akane },
+    { name: "Akane Owana", ultimate: "Ultimate Gymnast", isDead: false, icon: Akane },
     {
       name: "Chiaki Nanami",
       ultimate: "Ultimate Gamer",
