@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../../index.css";
 
 export default function Card({
+  chID,
   chName,
   chImage,
   isDead,
@@ -16,7 +17,7 @@ export default function Card({
       <div
         onMouseOver={() => setUltimate(true)}
         onMouseLeave={() => setUltimate(false)}
-        onClick={() => navigate(`/characters/${chName.split(" ")[0]}`)}
+        onClick={() => navigate(`/characters/${chID}`)}
         className="mx-10 text-center text-white duration-300 bg-[rgb(35,35,35)] shadow-xl rounded-2xl hover:text-yellow-500 hover:bg-yellow-500">
         <h1
           className={`${

@@ -49,96 +49,112 @@ export default function Home() {
   const [spoilers, setSpoilers] = useState(false);
   const [thhCharactersInfo, setThh] = useState([
     {
+      id: "1",
       name: "Chihiri Fujisaki",
       ultimate: "Ultimate Programmer",
       isDead: true,
       icon: Chihiri,
     },
     {
+      id: "2",
       name: "Toko Fuwaka",
       ultimate: "Ultimate Writing Prodigy",
       isDead: false,
       icon: Toko,
     },
     {
+      id: "3",
       name: "Kyoko Kirigiri",
       ultimate: "Ultimate Detective",
       isDead: false,
       icon: Kirigiri,
     },
     {
+      id: "4",
       name: "Kiyotaka Ishimaru",
       ultimate: "Ultimate Moral Compass",
       isDead: true,
       icon: Taka,
     },
     {
+      id: "5",
       name: "Leon Kuwata",
       ultimate: "Ultimate Baseball Star",
       isDead: true,
       icon: Leon,
     },
     {
+      id: "6",
       name: "Celestia Ludenberg",
       ultimate: "Ultimate Gambler",
       isDead: true,
       icon: Celeste,
     },
     {
+      id: "7",
       name: "Naegi Makoto",
       ultimate: "Ultimate Lucky Student",
       isDead: false,
       icon: Naegi,
     },
     {
+      id: "8",
       name: "Sakuna Ogami",
       ultimate: "Ultimate Martial Artist",
       isDead: true,
       icon: Sakuna,
     },
     {
+      id: "9",
       name: "Mondo Owada",
       ultimate: "Ultimate Biker Gang",
       isDead: true,
       icon: Mondo,
     },
     {
+      id: "10",
       name: "Genocide Jack",
       ultimate: "Ultimate Murderous Fiend",
       isDead: false,
       icon: Jack,
     },
     {
+      id: "11",
       name: "Hifumi Yamada",
       ultimate: "Ultimate Fanfic Creator",
       isDead: true,
       icon: Hifumi,
     },
     {
+      id: "12",
       name: "Junko Enoshima",
       ultimate: "Ultimate Fashionista",
       isDead: true,
       icon: Junko,
     },
     {
+      id: "13",
       name: "Aoi Asahina",
       ultimate: "Ultimate Swimmer Pro",
       isDead: false,
       icon: Aoi,
     },
     {
+      id: "14",
       name: "Byakuya Togami",
       ultimate: "Ultimate Affluent Progeny",
       isDead: false,
       icon: Byakuya,
     },
     {
+      id: "15",
       name: "Yasuhiro Hagakute",
       ultimate: "Ultimate Clairvoyant",
       isDead: false,
       icon: Yasuhiro,
     },
     {
+      id: "16",
       name: "Sayaka Maizono",
       ultimate: "Ultimate Pop Sensation",
       isDead: true,
@@ -148,88 +164,114 @@ export default function Home() {
 
   const [gdCharactersInfo, setGd] = useState([
     {
+      id: "17",
       name: "Sonia Nevermind",
-      ultimate: "Ultimate ",
+      ultimate: "Ultimate Princess",
       isDead: false,
       icon: Sonia,
     },
     {
+      id: "18",
       name: "Gundham Tanaka",
       ultimate: "Ultimate Breeder",
       isDead: false,
       icon: Gundham,
     },
     {
+      id: "19",
       name: "Peko Pekoyama",
       ultimate: "Ultimate Swordswoman",
       isDead: true,
       icon: Peko,
     },
-    { name: "Akane Owana", ultimate: "Ultimate ", isDead: false, icon: Akane },
     {
+      id: "20",
+      name: "Akane Owana",
+      ultimate: "Ultimate Gymnast",
+      isDead: false,
+      icon: Akane,
+    },
+    {
+      id: "21",
       name: "Chiaki Nanami",
       ultimate: "Ultimate Gamer",
       isDead: false,
       icon: Chiaki,
     },
     {
+      id: "22",
       name: "Fuyuhiko Kuruzyu",
       ultimate: "Ultimate Yakuza",
       isDead: false,
       icon: Fuyuhiko,
     },
     {
+      id: "23",
       name: "Ibuki Mioda",
       ultimate: "Ultimate Musician",
       isDead: true,
       icon: Ibuki,
     },
     {
+      id: "24",
       name: "Mikan Tsumiki",
       ultimate: "Ultimate Nurse",
-      isDead: false,
+      isDead: true,
       icon: Mikan,
     },
     {
+      id: "25",
       name: "Teruteru Hanamura",
       ultimate: "Ultimate Cook",
       isDead: true,
       icon: Teruteru,
     },
-    { name: "Kazuichi Soda", ultimate: "Ultimate ", isDead: false, icon: Soda },
     {
+      id: "26",
+      name: "Kazuichi Soda",
+      ultimate: "Ultimate Mechanic",
+      isDead: false,
+      icon: Soda,
+    },
+    {
+      id: "27",
       name: "Byakuya Togami",
       ultimate: "Ultimate Affluent Progeny (?)",
       isDead: true,
       icon: ByakuyaGD,
     },
     {
+      id: "28",
       name: "Hajime Hinata",
       ultimate: "Ultimate ???",
       isDead: false,
       icon: Hajime,
     },
     {
+      id: "29",
       name: "Mahiru Koizumi",
       ultimate: "Ultimate Photographer",
       isDead: true,
       icon: Mahiru,
     },
     {
+      id: "30",
       name: "Nagito Komaeda",
       ultimate: "Ultimate Lucky Student",
       isDead: false,
       icon: Nagito,
     },
     {
+      id: "31",
       name: "Hiyoko Saijoni",
       ultimate: "Ultimate Traditional Dancer",
       isDead: true,
       icon: Hiyoko,
     },
     {
+      id: "32",
       name: "Nekomaru Nidai",
-      ultimate: "Ultimate ",
+      ultimate: "Ultimate Team Manager",
       isDead: false,
       icon: Nekomaru,
     },
@@ -265,9 +307,7 @@ export default function Home() {
       }
       setSort("ZA");
     }
-    console.log(sort);
   };
-  // console.log(spoilers);
   return (
     <main className={`bg-[url("./assets/imgs/thhBanner.png")]`}>
       <div className="flex flex-col items-center justify-center min-h-screen p-10 bg-[rgba(0,0,0,0.9)] max-md:bg-[rgba(0,0,0,0.85)]">
@@ -288,6 +328,7 @@ export default function Home() {
             ? thhCharactersInfo.map((character, index) => (
                 <Card
                   key={index}
+                  chID={character.id}
                   chName={character.name}
                   chImage={character.icon}
                   isDead={character.isDead}
@@ -296,7 +337,6 @@ export default function Home() {
                 />
               ))
             : null}
-          {console.log(thhCharactersInfo)}
           {franchise === "gd"
             ? gdCharactersInfo.map((character, index) => (
                 <Card
