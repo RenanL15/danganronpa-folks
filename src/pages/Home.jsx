@@ -12,7 +12,7 @@ import Footer from "../components/Footer/Footer";
 import Aoi from "../assets/imgs/thhCharacters/aoi.png";
 import Byakuya from "../assets/imgs/thhCharacters/byakuya.png";
 import Celeste from "../assets/imgs/thhCharacters/celestia.png";
-import Chihiri from "../assets/imgs/thhCharacters/chihiri.png";
+import Chihiro from "../assets/imgs/thhCharacters/Chihiro.png";
 import Hifumi from "../assets/imgs/thhCharacters/hifumi.png";
 import Jack from "../assets/imgs/thhCharacters/jack.png";
 import Junko from "../assets/imgs/thhCharacters/junko.png";
@@ -20,7 +20,7 @@ import Kirigiri from "../assets/imgs/thhCharacters/kyoko.png";
 import Leon from "../assets/imgs/thhCharacters/leon.png";
 import Mondo from "../assets/imgs/thhCharacters/mondo.png";
 import Naegi from "../assets/imgs/thhCharacters/naegi.png";
-import Sakuna from "../assets/imgs/thhCharacters/sakuna.png";
+import Sakura from "../assets/imgs/thhCharacters/Sakura.png";
 import Sayaka from "../assets/imgs/thhCharacters/sayaka.png";
 import Taka from "../assets/imgs/thhCharacters/taka.png";
 import Toko from "../assets/imgs/thhCharacters/toko.png";
@@ -50,10 +50,10 @@ export default function Home() {
   const [thhCharactersInfo, setThh] = useState([
     {
       id: "1",
-      name: "Chihiri Fujisaki",
+      name: "Chihiro Fujisaki",
       ultimate: "Ultimate Programmer",
       isDead: true,
-      icon: Chihiri,
+      icon: Chihiro,
     },
     {
       id: "2",
@@ -99,10 +99,10 @@ export default function Home() {
     },
     {
       id: "8",
-      name: "Sakuna Ogami",
+      name: "Sakura Ogami",
       ultimate: "Ultimate Martial Artist",
       isDead: true,
-      icon: Sakuna,
+      icon: Sakura,
     },
     {
       id: "9",
