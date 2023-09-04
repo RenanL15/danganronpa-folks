@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, ScrollRestoration } from "react-router-dom";
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
 
