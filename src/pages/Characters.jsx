@@ -65,7 +65,10 @@ export default function Characters() {
       id: "2",
       name: "Toko Fuwaka",
       ultimate: "Ultimate Writing Prodigy",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `At the hospital where Toko was born, a baby born at the same time died in a medical accident. It was unclear which mother's child was the dead baby. Both mothers refused to test their blood, as they both wanted their child to die. Around the child's accidental death, it became clear that the two women slept with the same man.`,
+        `Toko lived with one father and two mothers. Though the circumstances are a bit unclear, it's been confirmed that she was mistreated as a child. She was once locked into a closet and forced to stay there for three days without food. This traumatic experience resulted in her developing a pathological fear of the dark. She experienced severe psychological pressure and at some point turned to novels for comfort, but her negative feelings were too strong. This childhood trauma caused her to form Dissociative Identity Disorder (DID), with one alter named Genocide Jack. Jack was a serial killer who murdered several young men; the people on the internet, unaware of her gender, started to call her Genocide Jack. Toko blamed her mothers for Genocide Jack's creation.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Toko,
@@ -74,7 +77,10 @@ export default function Characters() {
       id: "3",
       name: "Kyoko Kirigiri",
       ultimate: "Ultimate Detective",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `Some time afterward, Jin married a woman from Uzuchi family and they had Kyoko. It appears that when she was very young, she and her father spent some time with Jin's close friend Koichi Kizakura. After learning about her existence, Fuhito invited Jin back to the family solely because he wanted to make the girl his heir. He began strict training to make Kyoko a true detective, though Jin still very much disliked his father. When Kyoko was only 7 years old, her mother turned ill and was hospitalized when Kyoko and Fuhito were doing detective work abroad. Jin tried to contact them, but Fuhito refused to aid his family and didn't even let Kyoko see her dying mother, because to Fuhito being a detective was more important than anything else.`,
+        `Kyoko's mother then died, with Kyoko's last memories of her being "a white face floating above a hospital bed". Absolutely furious with his father, Jin left the family, and Fuhito encouraged Kyoko to hate him by claiming that Jin only used her mother's death as an excuse to leave the family and pursue his own dreams.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Kirigiri,
@@ -83,7 +89,10 @@ export default function Characters() {
       id: "4",
       name: "Kiyotaka Ishimaru",
       ultimate: "Ultimate Moral Compass",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `During Kiyotaka's early life, his grandfather, Toranosuke Ishimaru, was once Prime Minister of Japan; a title Kiyotaka believed he gained through his own natural genius rather than any hard work. After only a few months in office, the public opinion of Toranosuke changed from high praise to widespread criticism due to a disastrous scandal, and he was forced to step down. After that, his business collapsed and the Ishimaru Family was left mistrusted and in huge debts which Kiyotaka has stated “Still have not been paid off, and continue to trouble my family to this day” and “My family is middle-class... No, we are below even that...” His family name shamed, Kiyotaka's grandfather allegedly spent the last years of his life in shamed silence.`,
+        `Kiyotaka gained a deep resentment for his grandfather and the label of “genius” that was associated with him, though he simultaneously seemed to feel sorry for him and believed that his grandfather's tragedy was an important lesson for him. He swore to restore honor to his family name by gaining his success through hard work rather than natural talent, sacrificing hobbies, and most of his social interactions for study sessions and good grades, even going as far to tell Makoto he never played video games or watched TV due to his dedication. Because of this, his social skills suffered and he didn't have any friends. He was a model student in his middle school, known for participating in its morals committee (disciplinary committee in the original Japanese game).`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Taka,
@@ -92,7 +101,10 @@ export default function Characters() {
       id: "5",
       name: "Leon Kuwata",
       ultimate: "Ultimate Baseball Star",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `Leon was very close to his cousin, Kanon Nakajima, since they were very young. Leon's father was the older brother of Kanon's father. Kanon was in love with Leon throughout their childhood and repeatedly tried to get him to notice her feelings for him, although he only ever saw her as a little sister. In middle school, Leon became a very skilled baseball player, and Kanon became the manager of his baseball team so she could watch him play. He was an ace in his position as the fourth batter at his school. However, Leon himself claimed that due to his exceptional natural talent for baseball, he was practically forced to play by other people since young age. Leon later attended LL Academy high school. To win the heart of a girl that he happened to meet at the hair salon, he became determined to change his title to Ultimate Musician. His hair and clothing style changed completely.`,
+        `During the Tragedy, Jin Kirigiri, the Headmaster of Hope's Peak Academy, planned to seal the school building and let the students live forever inside the Academy in order to protect them from the destruction. The class agreed to his plan, and they sealed the building together. Leon helped his classmates seal up the windows. The students lived peacefully inside the school building for a year without knowing that the Ultimate Despair members were already in their midst.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Leon,
@@ -113,7 +125,10 @@ export default function Characters() {
       id: "7",
       name: "Naegi Makoto",
       ultimate: "Ultimate Lucky Student",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `Makoto lived a normal life with his parents and little sister, Komaru. They also had a dog during his childhood. Although sometimes he didn't get along with his sister, he had a close relationship with Komaru. The two watched TV and shared thoughts on manga together.`,
+        `In middle school, Makoto went to Blackroot Junior High with Sayaka Maizono, however he was in class 2 while Sayaka was in class 4. He found a lost crane and rescued it; this act of kindness caught her attention, and that was how she remembers him even years later. It's implied that Makoto had a crush on her, but they never talked due to them being in different social standards. Later, he went to Dusk High School.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Naegi,
@@ -122,7 +137,10 @@ export default function Characters() {
       id: "8",
       name: "Sakura Ogami",
       ultimate: "Ultimate Martial Artist",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `The Ogami family had maintained their dojo for over three centuries. They lived close to nature and had an old-fashioned life style. Sakura was the only daughter born into her clan in her generation, and so was compelled to become even stronger than her male family members in order to prove her worth. As a child, Sakura trained at her family's dojo every day with her father. She fought champions of many disciplines until slowly overtime she was able to defeat everyone she fought. She was strong despite her slim and fair build. She surpassed her own father at the age of 14 after beating him in a grappling match, never losing to him again after that day. Her goal was to become the Strongest Human Alive.`,
+        `Sakura's first love and lifelong rival was a man named Kenshiro, a street fighter that she could not defeat, and the then-current Strongest Human Alive. While Sakura considered such feelings extremely embarrassing for a fighter like her and didn't want anyone to know about them, Kenshiro supported her by stating that she doesn't have to be "manly" nor a man to become the strongest person in the world. However, Kenshiro then developed a terminal illness with a prognosis of only six months to live. Sakura visited him soon after his diagnosis, and his condition had deteriorated quickly, becoming emaciated. Kenshiro gave Sakura his title of Strongest Human Alive, but she vowed she would earn the title herself by fighting him again after he had defeated his disease. This inspired her to begin building up her physical strength even further.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Sakura,
@@ -131,7 +149,10 @@ export default function Characters() {
       id: "9",
       name: "Mondo Owada",
       ultimate: "Ultimate Biker Gang",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `Mondo grew up with his older brother, Daiya Owada. He owned a Maltese dog named Chuck who he loved deeply. Chuck used to bring in the newspaper every morning when it was delivered to Mondo's home and would always beg Mondo for walks each day but died at the age of nine sometime during Mondo's childhood. He was raised by his brother to become strong and mentioned that his mother would kill him if he were ever to hit a woman.`,
+        `He became dedicated to biking when he was young, being first allowed to ride with The Crazy Diamonds through his older brother Daiya Owada who invited him into the gang. Mondo was inspired by his older brother to take up biking and helped continue to transform The Crazy Diamonds into a well-known biker gang. From then on both brothers were known as The Diamond Brothers, a well-known name across Japan. Mondo constantly lived in Daiya's shadow. When he first began riding he ended up at the back of the group which ended in him being caught by the police, causing a scuffle. Despite this Mondo was still able to rise through the ranks with perseverance and patience.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Mondo,
@@ -140,7 +161,10 @@ export default function Characters() {
       id: "10",
       name: "Genocide Jack",
       ultimate: "Ultimate Murderous Fiend",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `Genocide Jack is a murderous fiend who killed any man she found handsome. She murdered all of her victims by crucifying them with her Genoscissors. Her calling card is writing the word "Bloodlust" in the victim's blood on a nearby wall ("Bloodbath Fever" in original Japanese). Her victims were also written about in the Genocide Jack's secret book. In one of her free time events, she revealed that her very first victim was her and Toko's first love, one of her elementary school classmates who pinned the love letter she wrote him on the bulletin board as a way of mocking her. Genocide Jack reacted by following the boy to Shikoku and killing him. By the time Toko went to Hope's Peak, she killed 37 people.`,
+        `She states Toko's life in a repressed modern society caused her to develop Dissociative Identity Disorder, which created Jack as an expression of Toko's repressed emotions. In Danganronpa Another Episode, Toko revealed that Genocide Jack was the result of her rough and often neglectful home life.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Jack,
@@ -161,7 +185,10 @@ export default function Characters() {
       id: "12",
       name: "Junko Enoshima",
       ultimate: "Ultimate Fashionista",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `Much of Junko's early life is unknown. As children, Junko and her twin sister Mukuro lived in abject conditions and were even homeless at one point. As she puts it, she regretted the moment of her own birth, feeling that her birth into the world was a mistake. Due to her analytical skills allowing her to predict the outcome of events, she became bored with the world. Because of that, she took an interest in despair, which she believes is unpredictable and exciting, at a very young age.`,
+        `As a child, she was close with Yasuke Matsuda, as they didn't have any other friends. One particular moment between the two when they were elementary school students was when Junko spent a month building a sand sculpture modeled after the Sagrada Familia church at the public park, and she even used very advanced techniques for her age. The sculpture got closer to completion and many people from around the neighborhood came over just to watch her work.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Junko,
@@ -194,7 +221,10 @@ export default function Characters() {
       id: "15",
       name: "Yasuhiro Hagakute",
       ultimate: "Ultimate Clairvoyant",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `Yasuhiro lived alone with his mother, Hiroko Hagakure, who loves him dearly despite his many flaws. Very little is known about his father, though his father apparently lived with them at some point, as Yasuhiro once mentioned their house burning down because his father fell asleep with a burning cigarette. According to his mother, there was some sort of trouble between them because she did something and let it go on too long, causing them to break up. Yasuhiro himself had several problems with women and money, and he was also held back about four times in middle and high school. He used to attend Kiiwatetsu Commerce High School.`,
+        `Yasuhiro saved up a small fortune by offering his services as a Fortune-Teller. Whilst his predictions rate alone netted him on most clients, it is also implied that he scammed much more. He claims to have spent the money on rare artifacts of mystical origins, such as a 100-million-yen crystal ball that was allegedly owned by Napoleon Bonaparte and George Washington. These were invariably proved to be forgeries.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Yasuhiro,
@@ -203,7 +233,10 @@ export default function Characters() {
       id: "16",
       name: "Sayaka Maizono",
       ultimate: "Ultimate Pop Sensation",
-      history: [`to be done...`, `to be done...`],
+      history: [
+        `Sayaka was raised solely by her father, as her mother had passed away. Because her father worked long hours every day, Sayaka spent a lot of time alone at home. The only thing that kept her from feeling lonely was the idol live show she watched on television. The idol girls' smiles were a source of strength for her, and she became determined to become an idol herself so that she could give that same strength to others. However, it is noted that she was so determined to achieve her dream that she made multiple sacrifices and did bad things to follow through and do so.`,
+        `Sayaka and Makoto Naegi both went to Sixth Black Root Middle School, though were unaware of each other's character because they weren't in the same classes and social groups. On one occasion, Sayaka saw Makoto nurse an injured crane back to health after it got lost and stuck in the school pool. This action touched Sayaka, and, after that incident, she wanted to get to know Makoto more. Unfortunately, they ended up graduating middle school without interacting with each other, and then went to different high schools.`,
+      ],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Sayaka,
@@ -355,7 +388,8 @@ export default function Characters() {
     <div className="bg-[url(../src/assets/imgs/thhBanner.png)]">
       <div
         onClick={() => navigate("/")}
-        className="flex items-center gap-3 px-10 py-2 cursor-pointer text-xl text-white bg-slate-800 rounded-xl absolute top-4 left-4">
+        className="flex items-center gap-3 px-10 py-2 cursor-pointer text-xl text-white bg-slate-800 rounded-xl absolute top-4 left-4"
+      >
         <i className="fa-solid fa-caret-left"></i>
         <span className="font-['PT_Sans']">Back to characters</span>
       </div>
@@ -374,7 +408,8 @@ export default function Characters() {
               <div className="p-10 m-auto flex items-center max-w-5xl md:max-w-">
                 <i
                   onClick={() => setHistory(getCharacters().history[0])}
-                  className="text-6xl mr-12 cursor-pointer fa-solid fa-chevron-left max-lg:hidden"></i>
+                  className="text-6xl mr-12 cursor-pointer fa-solid fa-chevron-left max-lg:hidden"
+                ></i>
                 <div>
                   <h2 className="text-yellow-700 border-b-2 border-yellow-700 pb-1 inline-block">
                     {character.ultimate}
@@ -385,7 +420,8 @@ export default function Characters() {
                 </div>
                 <i
                   onClick={() => setHistory(getCharacters().history[1])}
-                  className="text-6xl ml-12 cursor-pointer fa-solid fa-chevron-right max-lg:hidden"></i>
+                  className="text-6xl ml-12 cursor-pointer fa-solid fa-chevron-right max-lg:hidden"
+                ></i>
               </div>
             </div>
           </div>
