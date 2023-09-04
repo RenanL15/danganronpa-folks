@@ -341,6 +341,7 @@ export default function Home() {
             ? gdCharactersInfo.map((character, index) => (
                 <Card
                   key={index}
+                  chID={character.id}
                   chName={character.name}
                   chImage={character.icon}
                   isDead={character.isDead}

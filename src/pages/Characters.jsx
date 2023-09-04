@@ -20,13 +20,31 @@ import Taka from "../assets/imgs/thhCharacters/full/taka.png";
 import Toko from "../assets/imgs/thhCharacters/full/toko.png";
 import Yasuhiro from "../assets/imgs/thhCharacters/full/yasuhiro.png";
 
+// Goodbye Despair characters
+import Ibuki from "../assets/imgs/gdCharacters/ibuki.png";
+import Mahiru from "../assets/imgs/gdCharacters/mahiru.png";
+import Chiaki from "../assets/imgs/gdCharacters/chiaki.png";
+import Peko from "../assets/imgs/gdCharacters/peko.png";
+import Nagito from "../assets/imgs/gdCharacters/nagito.png";
+import Soda from "../assets/imgs/gdCharacters/soda.png";
+import Hajime from "../assets/imgs/gdCharacters/hajime.png";
+import Fuyuhiko from "../assets/imgs/gdCharacters/fuyuhiko.png";
+import Sonia from "../assets/imgs/gdCharacters/sonia.png";
+import Hiyoko from "../assets/imgs/gdCharacters/hiyoko.png";
+import Nekomaru from "../assets/imgs/gdCharacters/nekomaru.png";
+import Mikan from "../assets/imgs/gdCharacters/mikan.png";
+import Teruteru from "../assets/imgs/gdCharacters/teruteru.png";
+import Akane from "../assets/imgs/gdCharacters/akane.png";
+import Gundham from "../assets/imgs/gdCharacters/gundham.png";
+import ByakuyaGD from "../assets/imgs/gdCharacters/byakuya.png";
+
 export default function Characters() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [character, setCharacter] = useState({
     name: "",
     ultimate: "",
-    history: [``, ``],
+    history: [],
     description: "",
     icon: "",
   });
@@ -47,7 +65,7 @@ export default function Characters() {
       id: "2",
       name: "Toko Fuwaka",
       ultimate: "Ultimate Writing Prodigy",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Toko,
@@ -56,7 +74,7 @@ export default function Characters() {
       id: "3",
       name: "Kyoko Kirigiri",
       ultimate: "Ultimate Detective",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Kirigiri,
@@ -65,7 +83,7 @@ export default function Characters() {
       id: "4",
       name: "Kiyotaka Ishimaru",
       ultimate: "Ultimate Moral Compass",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Taka,
@@ -74,7 +92,7 @@ export default function Characters() {
       id: "5",
       name: "Leon Kuwata",
       ultimate: "Ultimate Baseball Star",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Leon,
@@ -95,7 +113,7 @@ export default function Characters() {
       id: "7",
       name: "Naegi Makoto",
       ultimate: "Ultimate Lucky Student",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Naegi,
@@ -104,7 +122,7 @@ export default function Characters() {
       id: "8",
       name: "Sakura Ogami",
       ultimate: "Ultimate Martial Artist",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Sakura,
@@ -113,7 +131,7 @@ export default function Characters() {
       id: "9",
       name: "Mondo Owada",
       ultimate: "Ultimate Biker Gang",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Mondo,
@@ -122,7 +140,7 @@ export default function Characters() {
       id: "10",
       name: "Genocide Jack",
       ultimate: "Ultimate Murderous Fiend",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Jack,
@@ -143,7 +161,7 @@ export default function Characters() {
       id: "12",
       name: "Junko Enoshima",
       ultimate: "Ultimate Fashionista",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Junko,
@@ -176,7 +194,7 @@ export default function Characters() {
       id: "15",
       name: "Yasuhiro Hagakute",
       ultimate: "Ultimate Clairvoyant",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: false,
       icon: Yasuhiro,
@@ -185,10 +203,138 @@ export default function Characters() {
       id: "16",
       name: "Sayaka Maizono",
       ultimate: "Ultimate Pop Sensation",
-      history: [``, ``],
+      history: [`to be done...`, `to be done...`],
       description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
       isDead: true,
       icon: Sayaka,
+    },
+    {
+      id: "17",
+      name: "Sonia Nevermind",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Princess",
+      isDead: false,
+      icon: Sonia,
+    },
+    {
+      id: "18",
+      name: "Gundham Tanaka",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Breeder",
+      isDead: false,
+      icon: Gundham,
+    },
+    {
+      id: "19",
+      name: "Peko Pekoyama",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Swordswoman",
+      isDead: true,
+      icon: Peko,
+    },
+    {
+      id: "20",
+      name: "Akane Owana",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Gymnast",
+      isDead: false,
+      icon: Akane,
+    },
+    {
+      id: "21",
+      name: "Chiaki Nanami",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Gamer",
+      isDead: false,
+      icon: Chiaki,
+    },
+    {
+      id: "22",
+      name: "Fuyuhiko Kuruzyu",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Yakuza",
+      isDead: false,
+      icon: Fuyuhiko,
+    },
+    {
+      id: "23",
+      name: "Ibuki Mioda",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Musician",
+      isDead: true,
+      icon: Ibuki,
+    },
+    {
+      id: "24",
+      name: "Mikan Tsumiki",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Nurse",
+      isDead: true,
+      icon: Mikan,
+    },
+    {
+      id: "25",
+      name: "Teruteru Hanamura",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Cook",
+      isDead: true,
+      icon: Teruteru,
+    },
+    {
+      id: "26",
+      name: "Kazuichi Soda",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Mechanic",
+      isDead: false,
+      icon: Soda,
+    },
+    {
+      id: "27",
+      name: "Byakuya Togami",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Affluent Progeny (?)",
+      isDead: true,
+      icon: ByakuyaGD,
+    },
+    {
+      id: "28",
+      name: "Hajime Hinata",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate ???",
+      isDead: false,
+      icon: Hajime,
+    },
+    {
+      id: "29",
+      name: "Mahiru Koizumi",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Photographer",
+      isDead: true,
+      icon: Mahiru,
+    },
+    {
+      id: "30",
+      name: "Nagito Komaeda",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Lucky Student",
+      isDead: false,
+      icon: Nagito,
+    },
+    {
+      id: "31",
+      name: "Hiyoko Saijoni",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Traditional Dancer",
+      isDead: true,
+      icon: Hiyoko,
+    },
+    {
+      id: "32",
+      name: "Nekomaru Nidai",
+      history: [`to be done...`, `to be done...`],
+      ultimate: "Ultimate Team Manager",
+      isDead: false,
+      icon: Nekomaru,
     },
   ];
   function getCharacters() {
@@ -207,40 +353,40 @@ export default function Characters() {
 
   return (
     <div className="bg-[url(../src/assets/imgs/thhBanner.png)]">
-      <div className="flex justify-center bg-[rgba(30,30,31,0.95)] min-h-screen">
-        <div className="flex justify-center items-center text-3xl font-['PT_Sans'] overflow-hidden">
+      <div
+        onClick={() => navigate("/")}
+        className="flex items-center gap-3 px-10 py-2 cursor-pointer text-xl text-white bg-slate-800 rounded-xl absolute top-4 left-4">
+        <i className="fa-solid fa-caret-left"></i>
+        <span className="font-['PT_Sans']">Back to characters</span>
+      </div>
+      <div className="flex justify-center bg-[rgba(255,255,255,0.85)] min-h-screen">
+        <div className="flex justify-center items-center text-3xl font-['PT_Sans'] max-xl:flex-col-reverse max-2xl:text-2xl  max-md:text-lg">
           <img
-            className="w-72 absolute left-40 w-64"
+            className="w-80 left-28 p-5"
             src={character.icon}
             alt={character.name + " icon"}
           />
-          <div className="flex flex-col justify-center items-center gap-8 px-24 py-8 ">
-            <div className="gap-4 w-screen table overflow-hidden bg-slate-100 shadow-2xl">
+          <div className="flex flex-col justify-center items-center gap-8 px-24 py-28 max-lg:px-5">
+            <div className="gap-4 table overflow-hidden bg-slate-100 shadow-2xl rounded-2xl shadow-[rgba(0,0,0,0.3)]">
               <h1 className="text-6xl text-center p-5 text-yellow-500 bg-slate-950">
                 {character.name}
               </h1>
-              <div className="p-10">
-                <div className=" ml-[30rem] flex items-center w-[60rem]">
-                  <i
-                    onClick={() => setHistory(getCharacters().history[0])}
-                    className="text-6xl mr-12 cursor-pointer fa-solid fa-chevron-left"></i>
-                  <div>
-                    <h2 className="text-yellow-700">{character.ultimate}</h2>
-                    <p className="font-serif leading-[3rem] mt-5 text-justify transition-all duration-200">
-                      {history}
-                    </p>
-                  </div>
-                  <i
-                    onClick={() => setHistory(getCharacters().history[1])}
-                    className="text-6xl ml-12 cursor-pointer fa-solid fa-chevron-right"></i>
+              <div className="p-10 m-auto flex items-center max-w-5xl md:max-w-">
+                <i
+                  onClick={() => setHistory(getCharacters().history[0])}
+                  className="text-6xl mr-12 cursor-pointer fa-solid fa-chevron-left max-lg:hidden"></i>
+                <div>
+                  <h2 className="text-yellow-700 border-b-2 border-yellow-700 pb-1 inline-block">
+                    {character.ultimate}
+                  </h2>
+                  <p className="font-serif leading-[3rem] mt-2 text-justify max-md:text-left transition-all duration-200">
+                    {history}
+                  </p>
                 </div>
+                <i
+                  onClick={() => setHistory(getCharacters().history[1])}
+                  className="text-6xl ml-12 cursor-pointer fa-solid fa-chevron-right max-lg:hidden"></i>
               </div>
-            </div>
-            <div
-              onClick={() => navigate("/")}
-              className="flex items-center gap-3 px-10 py-2 cursor-pointer bg-yellow-600 rounded-xl">
-              <i className="fa-solid fa-caret-left"></i>
-              <span className="">Back to characters</span>
             </div>
           </div>
         </div>
