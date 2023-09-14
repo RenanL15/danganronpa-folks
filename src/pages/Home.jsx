@@ -174,7 +174,7 @@ export default function Home() {
       id: "18",
       name: "Gundham Tanaka",
       ultimate: "Ultimate Breeder",
-      isDead: false,
+      isDead: true,
       icon: Gundham,
     },
     {
@@ -272,7 +272,7 @@ export default function Home() {
       id: "32",
       name: "Nekomaru Nidai",
       ultimate: "Ultimate Team Manager",
-      isDead: false,
+      isDead: true,
       icon: Nekomaru,
     },
   ]);
