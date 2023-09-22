@@ -195,7 +195,7 @@ export default function Home() {
       id: "21",
       name: "Chiaki Nanami",
       ultimate: "Ultimate Gamer",
-      isDead: false,
+      isDead: true,
       icon: Chiaki,
     },
     {
@@ -258,7 +258,7 @@ export default function Home() {
       id: "30",
       name: "Nagito Komaeda",
       ultimate: "Ultimate Lucky Student",
-      isDead: false,
+      isDead: true,
       icon: Nagito,
     },
     {
