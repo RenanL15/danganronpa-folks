@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Warning from "../assets/imgs/warning.png";
 
 // Components
@@ -323,7 +323,7 @@ export default function Home() {
           sort={sort}
           sortByName={sortByName}
         />
-        <div className="grid grid-cols-4 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 2xl:px-28">
+        <div className="flex flex-wrap justify-center">
           {franchise === "thh"
             ? thhCharactersInfo.map((character, index) => (
                 <Card
@@ -351,7 +351,7 @@ export default function Home() {
               ))
             : null}
         </div>
-        {franchise === "kh" ? (
+        {/* {franchise === "kh" ? (
           <div className="flex items-center justify-center gap-2 p-12 mt-16 text-white bg-gray-800 rounded-2xl ">
             <img className="w-10" src={Warning} />
             <div className="px-3 text-center">
@@ -362,7 +362,7 @@ export default function Home() {
             </div>
             <img className="w-10" src={Warning} />
           </div>
-        ) : null}
+        ) : null} */}
       </div>
       <Footer />
     </main>

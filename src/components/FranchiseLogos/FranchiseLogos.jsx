@@ -10,7 +10,7 @@ export default function FranchiseLogos({
   setSort,
 }) {
   return (
-    <div className="flex justify-center items-center gap-32 max-lg:flex-col max-xl:gap-12">
+    <div className="flex items-center justify-center gap-32 max-lg:flex-col max-xl:gap-12">
       {/* Trigger Happy Havoc Logo */}
       <img
         onClick={() => {
@@ -42,7 +42,7 @@ export default function FranchiseLogos({
       />
 
       {/* Killing Harmony Logo */}
-      <img
+      {/* <img
         onClick={() => {
           setFranchise("kh");
           setSpoilers(false);
@@ -54,7 +54,7 @@ export default function FranchiseLogos({
             : "opacity-20 hover:opacity-100 hover:scale-110"
         } w-[28rem]`}
         src={khLogo}
-      />
+      /> */}
     </div>
   );
 }
