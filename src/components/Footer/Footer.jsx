@@ -5,16 +5,17 @@ export default function Footer() {
         <p className="font-['Electrolize'] text-white">
           Developed by:{" "}
           <a
-            href="https://github.com/renanl15"
+            href="https://github.com/ScryptRG"
             target="blank"
-            className="text-yellow-500 hover:border-b-2 hover:border-yellow-400">
-            RenanL15
+            className="text-yellow-500 hover:border-b-2 hover:border-yellow-400"
+          >
+            ScryptRG
           </a>{" "}
         </p>
         <i className="text-xl text-gray-200 fa-solid fa-heart"></i>
       </div>
       <div className="flex gap-5 mt-2">
-        <a href="https://github.com/renanl15" target="_blank">
+        <a href="https://github.com/ScryptRG" target="_blank">
           <i className="text-white duration-100 fa-brands fa-github hover:text-gray-400"></i>
         </a>
         <a href="https://linkedin.com/in/renan-almeida-lopes" target="_blank">
