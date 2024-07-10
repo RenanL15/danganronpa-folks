@@ -388,13 +388,13 @@ export default function Characters() {
     <div className="bg-[url(../src/assets/imgs/thhBanner.png)]">
       <div
         onClick={() => navigate("/")}
-        className="flex items-center gap-3 px-10 py-2 cursor-pointer text-xl text-white bg-slate-800 rounded-xl absolute top-4 left-4"
+        className="flex items-center gap-3 px-10 py-2 cursor-pointer text-white bg-slate-800 rounded-xl absolute top-4 left-4"
       >
         <i className="fa-solid fa-caret-left"></i>
         <span className="font-['PT_Sans']">Back to characters</span>
       </div>
       <div className="flex justify-center bg-[rgba(255,255,255,0.85)] min-h-screen">
-        <div className="flex justify-center items-center text-3xl font-['PT_Sans'] max-xl:flex-col-reverse max-2xl:text-2xl  max-md:text-lg">
+        <div className="flex justify-center items-center text-xl font-['PT_Sans'] max-xl:flex-col-reverse max-md:text-lg">
           <img
             className="w-80 left-28 p-5"
             src={character.icon}
@@ -402,13 +402,13 @@ export default function Characters() {
           />
           <div className="flex flex-col justify-center items-center gap-8 px-24 py-28 max-lg:px-5">
             <div className="gap-4 table overflow-hidden bg-slate-100 shadow-2xl rounded-2xl shadow-[rgba(0,0,0,0.3)]">
-              <h1 className="text-6xl text-center p-5 text-yellow-500 bg-slate-950">
+              <h1 className="text-3xl text-center p-5 text-yellow-500 bg-slate-950">
                 {character.name}
               </h1>
               <div className="p-10 m-auto flex items-center max-w-5xl md:max-w-">
                 <i
                   onClick={() => setHistory(getCharacters().history[0])}
-                  className="text-6xl mr-12 cursor-pointer fa-solid fa-chevron-left max-lg:hidden"
+                  className="text-3xl mr-12 cursor-pointer fa-solid fa-chevron-left max-lg:hidden"
                 ></i>
                 <div>
                   <h2 className="text-yellow-700 border-b-2 border-yellow-700 pb-1 inline-block">
@@ -420,7 +420,7 @@ export default function Characters() {
                 </div>
                 <i
                   onClick={() => setHistory(getCharacters().history[1])}
-                  className="text-6xl ml-12 cursor-pointer fa-solid fa-chevron-right max-lg:hidden"
+                  className="text-3xl ml-12 cursor-pointer fa-solid fa-chevron-right max-lg:hidden"
                 ></i>
               </div>
             </div>

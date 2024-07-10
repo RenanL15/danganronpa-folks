@@ -355,8 +355,8 @@ export default function Home() {
           <div className="flex items-center justify-center gap-2 p-12 mt-16 text-white bg-gray-800 rounded-2xl ">
             <img className="w-10" src={Warning} />
             <div className="px-3 text-center">
-              <h1 className="text-xl font-bold">WORKING ON IT!! </h1>
-              <span className="text-xl font-normal opacity-20">
+              <h1 className="font-bold">WORKING ON IT!! </h1>
+              <span className="font-normal opacity-20">
                 (still haven't played lol...)
               </span>
             </div>

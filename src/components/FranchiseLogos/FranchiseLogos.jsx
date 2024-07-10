@@ -22,8 +22,9 @@ export default function FranchiseLogos({
           franchise === "thh"
             ? "opacity-100 scale-110"
             : "opacity-20 hover:opacity-100 hover:scale-110"
-        } w-96`}
+        }`}
         src={thhLogo}
+        width={350}
       />
 
       {/* Goodbye Despair Logo */}
@@ -37,12 +38,13 @@ export default function FranchiseLogos({
           franchise === "gd"
             ? "opacity-100 scale-110"
             : "opacity-20 hover:opacity-100 hover:scale-110"
-        } w-[28rem]`}
+        }`}
         src={gdLogo}
+        width={350}
       />
 
       {/* Killing Harmony Logo */}
-      {/* <img
+      <img
         onClick={() => {
           setFranchise("kh");
           setSpoilers(false);
@@ -52,9 +54,10 @@ export default function FranchiseLogos({
           franchise === "kh"
             ? "opacity-100 scale-110"
             : "opacity-20 hover:opacity-100 hover:scale-110"
-        } w-[28rem]`}
+        }`}
         src={khLogo}
-      /> */}
+        width={350}
+      />
     </div>
   );
 }

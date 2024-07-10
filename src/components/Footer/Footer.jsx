@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center justify-center gap-3 p-20 text-3xl bg-gray-900 max-md:text-2xl max-sm:px-2 max-sm:py-16">
+    <div className="flex flex-col items-center justify-center gap-3 p-20 text-xl bg-gray-900 max-sm:px-2 max-sm:py-16">
       <div className="flex items-center gap-3">
         <p className="font-['Electrolize'] text-white">
           Developed by:{" "}
@@ -12,7 +12,7 @@ export default function Footer() {
             ScryptRG
           </a>{" "}
         </p>
-        <i className="text-xl text-gray-200 fa-solid fa-heart"></i>
+        <i className="text-gray-200 fa-solid fa-heart"></i>
       </div>
       <div className="flex gap-5 mt-2">
         <a href="https://github.com/ScryptRG" target="_blank">
