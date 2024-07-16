@@ -38,6 +38,10 @@ import Akane from "../assets/imgs/gdCharacters/akane.png";
 import Gundham from "../assets/imgs/gdCharacters/gundham.png";
 import ByakuyaGD from "../assets/imgs/gdCharacters/byakuya.png";
 
+// Killing Harmony
+import Angie from "../assets/imgs/khCharacters/angie.png";
+import Kaede from "../assets/imgs/khCharacters/kaede.png";
+
 export default function Characters() {
   const { id } = useParams();
   const navigate = useNavigate();

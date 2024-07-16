@@ -44,6 +44,10 @@ import Akane from "../assets/imgs/gdCharacters/akane.png";
 import Gundham from "../assets/imgs/gdCharacters/gundham.png";
 import ByakuyaGD from "../assets/imgs/gdCharacters/byakuya.png";
 
+// Killing Harmony
+import Angie from "../assets/imgs/khCharacters/angie.png";
+import Kaede from "../assets/imgs/khCharacters/kaede.png";
+
 export default function Home() {
   const [franchise, setFranchise] = useState("thh");
   const [spoilers, setSpoilers] = useState(false);
@@ -162,6 +166,22 @@ export default function Home() {
     },
   ]);
 
+  const [khCharactersInfo, setKh] = useState([
+    {
+      id: "33",
+      name: "Kaede Akamatsu",
+      ultimate: "Ultimate Pianist",
+      isDead: true,
+      icon: Kaede,
+    },
+    {
+      id: "34",
+      name: "Angie Yonaga",
+      ultimate: "Ultimate Artist",
+      isDead: true,
+      icon: Angie,
+    },
+  ]);
   const [gdCharactersInfo, setGd] = useState([
     {
       id: "17",
@@ -276,6 +296,7 @@ export default function Home() {
       icon: Nekomaru,
     },
   ]);
+
   const showSpoilers = () => {
     let cfSpoilers;
     if (!spoilers) {
@@ -350,19 +371,20 @@ export default function Home() {
                 />
               ))
             : null}
+          {franchise === "kh"
+            ? khCharactersInfo.map((character, index) => (
+                <Card
+                  key={index}
+                  chID={character.id}
+                  chName={character.name}
+                  chImage={character.icon}
+                  isDead={character.isDead}
+                  chUltimate={character.ultimate}
+                  showSpoilers={spoilers}
+                />
+              ))
+            : null}
         </div>
-        {/* {franchise === "kh" ? (
-          <div className="flex items-center justify-center gap-2 p-12 mt-16 text-white bg-gray-800 rounded-2xl ">
-            <img className="w-10" src={Warning} />
-            <div className="px-3 text-center">
-              <h1 className="font-bold">WORKING ON IT!! </h1>
-              <span className="font-normal opacity-20">
-                (still haven't played lol...)
-              </span>
-            </div>
-            <img className="w-10" src={Warning} />
-          </div>
-        ) : null} */}
       </div>
       <Footer />
     </main>
