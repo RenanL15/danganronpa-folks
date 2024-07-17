@@ -45,8 +45,22 @@ import Gundham from "../assets/imgs/gdCharacters/gundham.png";
 import ByakuyaGD from "../assets/imgs/gdCharacters/byakuya.png";
 
 // Killing Harmony
-import Angie from "../assets/imgs/khCharacters/angie.png";
 import Kaede from "../assets/imgs/khCharacters/kaede.png";
+import Angie from "../assets/imgs/khCharacters/angie.png";
+import Gonta from "../assets/imgs/khCharacters/gonta.png";
+import Himiko from "../assets/imgs/khCharacters/himiko.png";
+import Keebo from "../assets/imgs/khCharacters/keebo.png";
+import Kaito from "../assets/imgs/khCharacters/kaito.png";
+import Kirumi from "../assets/imgs/khCharacters/kirumi.png";
+import Kokichi from "../assets/imgs/khCharacters/kokichi.png";
+import Korekiyo from "../assets/imgs/khCharacters/korekiyo.png";
+import Maki from "../assets/imgs/khCharacters/maki.png";
+import Shuichi from "../assets/imgs/khCharacters/shuichi.png";
+import Miu from "../assets/imgs/khCharacters/miu.png";
+import Tsumugi from "../assets/imgs/khCharacters/tsumugi.png";
+import Ryoma from "../assets/imgs/khCharacters/ryoma.png";
+import Rantaro from "../assets/imgs/khCharacters/rantaro.png";
+import Tenko from "../assets/imgs/khCharacters/tenko.png";
 
 export default function Home() {
   const [franchise, setFranchise] = useState("thh");
@@ -181,6 +195,104 @@ export default function Home() {
       isDead: true,
       icon: Angie,
     },
+    {
+      id: "35",
+      name: "Gonta Gokuhara",
+      ultimate: "Ultimate Entomologist",
+      isDead: true,
+      icon: Gonta,
+    },
+    {
+      id: "36",
+      name: "Himiko Yumeno",
+      ultimate: "Ultimate Magician",
+      isDead: false,
+      icon: Himiko,
+    },
+    {
+      id: "37",
+      name: "K1-B0",
+      ultimate: "Ultimate Robot",
+      isDead: true,
+      icon: Keebo,
+    },
+    {
+      id: "38",
+      name: "Kaito",
+      ultimate: "Ultimate Astronaut",
+      isDead: true,
+      icon: Kaito,
+    },
+    {
+      id: "39",
+      name: "Kirumi",
+      ultimate: "Ultimate Maid",
+      isDead: true,
+      icon: Kirumi,
+    },
+    {
+      id: "40",
+      name: "Kokichi",
+      ultimate: "Ultimate Supreme Leader",
+      isDead: true,
+      icon: Kokichi,
+    },
+    {
+      id: "41",
+      name: "Korekiyo",
+      ultimate: "Ultimate Anthropologist",
+      isDead: true,
+      icon: Korekiyo,
+    },
+    {
+      id: "42",
+      name: "Maki",
+      ultimate: "Ultimate Child Caregiver",
+      isDead: false,
+      icon: Maki,
+    },
+    {
+      id: "43",
+      name: "Shuichi Saihara",
+      ultimate: "Ultimate Detective",
+      isDead: false,
+      icon: Shuichi,
+    },
+    {
+      id: "44",
+      name: "Miu Iruma",
+      ultimate: "Ultimate Inventor",
+      isDead: true,
+      icon: Miu,
+    },
+    {
+      id: "45",
+      name: "Ryoma Hoshi",
+      ultimate: "Ultimate Tennis Pro",
+      isDead: true,
+      icon: Ryoma,
+    },
+    {
+      id: "46",
+      name: "Tsumugi Shirogane",
+      ultimate: "Ultimate Child Caregiver",
+      isDead: true,
+      icon: Tsumugi,
+    },
+    {
+      id: "47",
+      name: "Rantaro",
+      ultimate: "Ultimate ???",
+      isDead: true,
+      icon: Rantaro,
+    },
+    {
+      id: "48",
+      name: "Tenko Chabashira",
+      ultimate: "Ultimate Aikido",
+      isDead: true,
+      icon: Tenko,
+    },
   ]);
   const [gdCharactersInfo, setGd] = useState([
     {
@@ -314,8 +426,13 @@ export default function Home() {
         thhCharactersInfo.sort((b, a) => a.name.localeCompare(b.name));
         setThh([...thhCharactersInfo]);
       } else {
-        gdCharactersInfo.sort((b, a) => a.name.localeCompare(b.name));
-        setGd([...gdCharactersInfo]);
+        if (franchise === "gd") {
+          gdCharactersInfo.sort((b, a) => a.name.localeCompare(b.name));
+          setGd([...gdCharactersInfo]);
+        } else {
+          khCharactersInfo.sort((b, a) => a.name.localeCompare(b.name));
+          setKh([...khCharactersInfo]);
+        }
       }
       setSort("AZ");
     } else {
@@ -323,8 +440,13 @@ export default function Home() {
         thhCharactersInfo.sort((b, a) => b.name.localeCompare(a.name));
         setThh([...thhCharactersInfo]);
       } else {
-        gdCharactersInfo.sort((b, a) => b.name.localeCompare(a.name));
-        setGd([...gdCharactersInfo]);
+        if (franchise === "gd") {
+          gdCharactersInfo.sort((b, a) => b.name.localeCompare(a.name));
+          setGd([...gdCharactersInfo]);
+        } else {
+          khCharactersInfo.sort((b, a) => b.name.localeCompare(a.name));
+          setKh([...khCharactersInfo]);
+        }
       }
       setSort("ZA");
     }
