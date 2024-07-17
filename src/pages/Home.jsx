@@ -129,13 +129,13 @@ export default function Home() {
       isDead: true,
       icon: Mondo,
     },
-    {
-      id: "10",
-      name: "Genocide Jack",
-      ultimate: "Ultimate Murderous Fiend",
-      isDead: false,
-      icon: Jack,
-    },
+    // {
+    //   id: "10",
+    //   name: "Genocide Jack",
+    //   ultimate: "Ultimate Murderous Fiend",
+    //   isDead: false,
+    //   icon: Jack,
+    // },
     {
       id: "11",
       name: "Hifumi Yamada",

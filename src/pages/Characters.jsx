@@ -161,18 +161,18 @@ export default function Characters() {
       isDead: true,
       icon: Mondo,
     },
-    {
-      id: "10",
-      name: "Genocide Jack",
-      ultimate: "Ultimate Murderous Fiend",
-      history: [
-        `Genocide Jack is a murderous fiend who killed any man she found handsome. She murdered all of her victims by crucifying them with her Genoscissors. Her calling card is writing the word "Bloodlust" in the victim's blood on a nearby wall ("Bloodbath Fever" in original Japanese). Her victims were also written about in the Genocide Jack's secret book. In one of her free time events, she revealed that her very first victim was her and Toko's first love, one of her elementary school classmates who pinned the love letter she wrote him on the bulletin board as a way of mocking her. Genocide Jack reacted by following the boy to Shikoku and killing him. By the time Toko went to Hope's Peak, she killed 37 people.`,
-        `She states Toko's life in a repressed modern society caused her to develop Dissociative Identity Disorder, which created Jack as an expression of Toko's repressed emotions. In Danganronpa Another Episode, Toko revealed that Genocide Jack was the result of her rough and often neglectful home life.`,
-      ],
-      description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
-      isDead: false,
-      icon: Jack,
-    },
+    // {
+    //   id: "10",
+    //   name: "Genocide Jack",
+    //   ultimate: "Ultimate Murderous Fiend",
+    //   history: [
+    //     `Genocide Jack is a murderous fiend who killed any man she found handsome. She murdered all of her victims by crucifying them with her Genoscissors. Her calling card is writing the word "Bloodlust" in the victim's blood on a nearby wall ("Bloodbath Fever" in original Japanese). Her victims were also written about in the Genocide Jack's secret book. In one of her free time events, she revealed that her very first victim was her and Toko's first love, one of her elementary school classmates who pinned the love letter she wrote him on the bulletin board as a way of mocking her. Genocide Jack reacted by following the boy to Shikoku and killing him. By the time Toko went to Hope's Peak, she killed 37 people.`,
+    //     `She states Toko's life in a repressed modern society caused her to develop Dissociative Identity Disorder, which created Jack as an expression of Toko's repressed emotions. In Danganronpa Another Episode, Toko revealed that Genocide Jack was the result of her rough and often neglectful home life.`,
+    //   ],
+    //   description: `When Chihiro was a child, he became the subject of harassment and bullying.`,
+    //   isDead: false,
+    //   icon: Jack,
+    // },
     {
       id: "11",
       name: "Hifumi Yamada",
