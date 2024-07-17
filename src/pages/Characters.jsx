@@ -397,7 +397,7 @@ export default function Characters() {
         <i className="fa-solid fa-caret-left"></i>
         <span className="font-['PT_Sans']">Back to characters</span>
       </div>
-      <div className="flex justify-center bg-[rgba(255,255,255,0.85)] min-h-screen">
+      <div className="flex justify-center bg-[rgba(0,0,0,0.8)] min-h-screen">
         <div className="flex justify-center items-center text-xl font-['PT_Sans'] max-xl:flex-col-reverse max-md:text-lg">
           <img
             className="w-80 left-28 p-5"
@@ -405,26 +405,26 @@ export default function Characters() {
             alt={character.name + " icon"}
           />
           <div className="flex flex-col justify-center items-center gap-8 px-24 py-28 max-lg:px-5">
-            <div className="gap-4 table overflow-hidden bg-slate-100 shadow-2xl rounded-2xl shadow-[rgba(0,0,0,0.3)]">
-              <h1 className="text-3xl text-center p-5 text-yellow-500 bg-slate-950">
+            <div className="gap-4 table overflow-hidden bg-[rgba(0,0,0,0.2)] backdrop-blur-lg border-neutral-500 border shadow-2xl rounded-2xl shadow-[rgba(0,0,0,0.3)]">
+              <h1 className="text-3xl text-center p-5 text-yellow-500 bg-black">
                 {character.name}
               </h1>
               <div className="p-10 m-auto flex items-center max-w-5xl md:max-w-">
                 <i
                   onClick={() => setHistory(getCharacters().history[0])}
-                  className="text-3xl mr-12 cursor-pointer fa-solid fa-chevron-left max-lg:hidden"
+                  className="text-yellow-600 text-3xl mr-12 cursor-pointer fa-solid fa-chevron-left max-lg:hidden"
                 ></i>
                 <div>
-                  <h2 className="text-yellow-700 border-b-2 border-yellow-700 pb-1 inline-block">
+                  <h2 className="text-yellow-500 border-b-2 border-yellow-500 pb-1 inline-block">
                     {character.ultimate}
                   </h2>
-                  <p className="font-serif leading-[3rem] mt-2 text-justify max-md:text-left transition-all duration-200">
+                  <p className="text-white font-serif leading-[3rem] mt-2 text-justify max-md:text-left transition-all duration-200">
                     {history}
                   </p>
                 </div>
                 <i
                   onClick={() => setHistory(getCharacters().history[1])}
-                  className="text-3xl ml-12 cursor-pointer fa-solid fa-chevron-right max-lg:hidden"
+                  className="text-yellow-600 text-3xl ml-12 cursor-pointer fa-solid fa-chevron-right max-lg:hidden"
                 ></i>
               </div>
             </div>
