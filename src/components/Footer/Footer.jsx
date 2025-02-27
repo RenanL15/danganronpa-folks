@@ -6,11 +6,11 @@ export default function Footer() {
           Developed with
           <i className="text-gray-200 fa-solid fa-heart mx-2 text-base"></i>by{" "}
           <a
-            href="https://github.com/ScryptRG"
+            href="https://github.com/scryptxz"
             target="blank"
             className="text-yellow-500 hover:border-b-2 hover:border-yellow-400"
           >
-            ScryptRG
+            scryptxz
           </a>{" "}
           &copy; 2023
         </p>
